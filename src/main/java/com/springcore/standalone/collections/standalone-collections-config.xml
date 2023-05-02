@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context
+			http://www.springframework.org/schema/context/spring-context.xsd
+			http://www.springframework.org/schema/util
+			http://www.springframework.org/schema/util/spring-util.xsd">
+			
+		<!-- standalone collection of Linkedlist type-->	
+		<util:list list-class="java.util.LinkedList" id="studentList">
+			<value>Nazish</value>
+			<value>Rahul</value>
+			<value>Ajay</value>
+		</util:list>
+		
+		<!-- standalone collection of LinkedHashMap type-->	
+		<util:map map-class="java.util.LinkedHashMap" id="courseFeeMap">
+			<entry key="Spring Framework" value="3500" />
+			<entry key="Hibernate" value="2000" />
+			<entry key="Android" value="4000" />
+		</util:map>
+		
+		<!-- standalone collection of Properties type-->
+		<util:properties id="dbConfig" >
+			<prop key="driver">com.mysql.cj.jdbc.Driver</prop>
+			<prop key="username">user123</prop>
+			<prop key="password">root</prop>
+			<prop key="url">jdbc:mysql://localhost:8080/database</prop>
+		</util:properties>
+
+    	<bean class="com.springcore.standalone.collections.Person" name="person">
+			<property name="students" ref="studentList" />
+			<property name="courseFee" ref="courseFeeMap" />
+			<property name="properties" ref="dbConfig" />
+		</bean>
+
+</beans>
