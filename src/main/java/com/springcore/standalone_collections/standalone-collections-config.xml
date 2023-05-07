@@ -32,7 +32,7 @@
 			<prop key="url">jdbc:mysql://localhost:8080/database</prop>
 		</util:properties>
 
-    	<bean class="com.springcore.standalone.collections.Person" name="person">
+    	<bean class="com.springcore.standalone_collections.Person" name="person">
 			<property name="students" ref="studentList" />
 			<property name="courseFee" ref="courseFeeMap" />
 			<property name="properties" ref="dbConfig" />
