@@ -11,12 +11,16 @@ Here is the project directory for the entire source code  :
 │      └── com/springcore                   -> package for spring core concepts
 │             ├── autowire                      -> autowiring using xml
 │             ├── autowire.annotation           -> autowiring using annotation
+│             ├── bean_lifecycle                -> lifecycle of a bean
+│             ├── bean_scope                    -> scope of a bean
 │             ├── ci                            -> constructor injection
 │             ├── collections                   -> injecting collection types
-│             ├── lifecycle                     -> bean lifecycle
 │             ├── pi                            -> setter / property injection
 │             ├── ref                           -> injecting reference beans
-│             └── standalone.collections        -> standalone collections
+│             ├── spel                          -> spring expression language
+│             ├── ref                           -> injecting reference beans
+│             ├── standalone_collections        -> standalone collections
+│             └── stereotype                    -> stereotype annotations
 ├── src/test/java                       -> test package
 ├── pom.xml                             -> starter pom for maven 
 └── README.md                           -> readme file 

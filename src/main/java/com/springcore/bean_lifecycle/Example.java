@@ -1,4 +1,4 @@
-package com.springcore.lifecycle;
+package com.springcore.bean_lifecycle;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;

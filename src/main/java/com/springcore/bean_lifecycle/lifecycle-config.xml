@@ -17,17 +17,17 @@
 	<!-- <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />	-->
  
 	<!-- configuring bean lifecycle using xml-->
-	<bean class="com.springcore.lifecycle.Samosa" name="s1" init-method ="init" destroy-method="destroy">
+	<bean class="com.springcore.bean_lifecycle.Samosa" name="s1" init-method ="init" destroy-method="destroy">
  		<property name="price" value="15"/>
 	</bean>
 	
 	<!-- configuring bean lifecycle using interface-->
-	<bean class="com.springcore.lifecycle.Pepsi" name="p1">
+	<bean class="com.springcore.bean_lifecycle.Pepsi" name="p1">
  		<property name="price" value="50"/>
 	</bean>
 	
 	<!-- configuring bean lifecycle using annotations-->
-	<bean class="com.springcore.lifecycle.Example" name="example">
+	<bean class="com.springcore.bean_lifecycle.Example" name="example">
 		<property name="subject" value="maths"/>
 	</bean>
 
