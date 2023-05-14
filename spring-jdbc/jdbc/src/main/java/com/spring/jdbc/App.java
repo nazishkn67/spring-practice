@@ -11,13 +11,15 @@ import org.springframework.jdbc.core.JdbcTemplate;
 public class App {
 	public static void main(String[] args) {
 		
+		System.out.println("Program has been started...");
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/jdbc/config.xml");
 		JdbcTemplate template = context.getBean("jdbcTemplate", JdbcTemplate.class);
-		System.out.println("Database has been started...");
 		
+		//insert query
 		String query = "insert into student values(?, ?, ?)";
 		
-		int result = template.update(query, 103, "Ajay", "Delhi");
+		//executing query
+		int result = template.update(query, 104, "Saurabh", "Bokaro");
 		System.out.println("Records inserted: " + result);
 		
 	}
